@@ -1,0 +1,12 @@
+// toggle(萬聖節)
+:root {
+	--primary: #7052b2;
+}
+
+// toggle(聖誕節)
+.XmasMode {
+	--primary: #fff;
+}
+
+// 定義參數
+$primary: var(--primary);

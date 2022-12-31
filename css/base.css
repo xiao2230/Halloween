@@ -1,0 +1,29 @@
+:root {
+  --primary: #7052b2;
+}
+
+.XmasMode {
+  --primary: #fff;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 100vh;
+  background-color: var(--primary);
+}
+header .banneBgSmoke {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background: url(/images/banner_bg_smoke.svg) no-repeat right/cover;
+}
+header .bannerBgMain {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background: url(/images/banner_bg_main.svg) no-repeat right/cover;
+}/*# sourceMappingURL=base.css.map */

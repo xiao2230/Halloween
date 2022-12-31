@@ -1,0 +1,22 @@
+@import "variables";
+@import "mixin";
+
+body {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+header {
+	height: 100vh;
+	background-color: $primary;
+
+	.banneBgSmoke {
+		@include bg_display;
+		background: url(/images/banner_bg_smoke.svg) no-repeat right / cover;
+	}
+
+	.bannerBgMain {
+		@include bg_display;
+		background: url(/images/banner_bg_main.svg) no-repeat right / cover;
+	}
+}
