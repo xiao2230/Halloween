@@ -15,15 +15,75 @@ header {
   height: 100vh;
   background-color: var(--primary);
 }
-header .banneBgSmoke {
+header .bgSmoke {
   width: 100vw;
   height: 100vh;
   position: absolute;
   background: url(/images/banner_bg_smoke.svg) no-repeat right/cover;
 }
-header .bannerBgMain {
+header .bgMain {
   width: 100vw;
   height: 100vh;
   position: absolute;
   background: url(/images/banner_bg_main.svg) no-repeat right/cover;
+}
+header .bgBats {
+  position: absolute;
+  right: 10px;
+}
+header .bgBats .bgBat1 {
+  background: url(/images/bat.svg) no-repeat center/cover;
+  display: inline-block;
+  width: 8vh;
+  height: 8vh;
+  transform: rotate(-21deg) translate(-126px, 80px);
+}
+header .bgBats .bgBat2 {
+  background: url(/images/bat.svg) no-repeat center/cover;
+  display: inline-block;
+  width: 4vh;
+  height: 4vh;
+  transform: rotate(-7deg) translate(-102px, 66px);
+}
+header .bgBats .bgBat3 {
+  background: url(/images/bat.svg) no-repeat center/cover;
+  display: inline-block;
+  width: 8vh;
+  height: 8vh;
+  transform: rotate(23deg) translate(-128px, 75px);
+}
+header .bgBats .bgBat4 {
+  background: url(/images/bat.svg) no-repeat center/cover;
+  display: inline-block;
+  width: 5vh;
+  height: 5vh;
+  transform: rotate(-7deg) translate(-118px, 86px);
+}
+header .bgBats .bgBat5 {
+  background: url(/images/bat.svg) no-repeat center/cover;
+  display: inline-block;
+  width: 8vh;
+  height: 8vh;
+  transform: rotate(30deg) translate(-113px, 81px);
+}
+header .bgBats .bgBat6 {
+  background: url(/images/bat.svg) no-repeat center/cover;
+  display: inline-block;
+  width: 6vh;
+  height: 6vh;
+  transform: rotate(-13deg) translate(-105px, 99px);
+}
+header .bgBats .bgBat7 {
+  background: url(/images/bat.svg) no-repeat center/cover;
+  display: inline-block;
+  width: 7vh;
+  height: 7vh;
+  transform: rotate(-19deg) translate(-126px, 52px);
+}
+header .bgBats .bgBat8 {
+  background: url(/images/bat.svg) no-repeat center/cover;
+  display: inline-block;
+  width: 4vh;
+  height: 4vh;
+  transform: rotate(9deg) translate(-113px, 69px);
 }/*# sourceMappingURL=base.css.map */

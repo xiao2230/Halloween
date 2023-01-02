@@ -10,13 +10,33 @@ header {
 	height: 100vh;
 	background-color: $primary;
 
-	.banneBgSmoke {
+	.bgSmoke {
 		@include bg_display;
 		background: url(/images/banner_bg_smoke.svg) no-repeat right / cover;
 	}
 
-	.bannerBgMain {
+	.bgMain {
 		@include bg_display;
 		background: url(/images/banner_bg_main.svg) no-repeat right / cover;
+	}
+
+	.bgBats {
+		position: absolute;
+		right: 10px;
+
+		$bgBatNum: 8;
+		@for $i from 1 through $bgBatNum {
+			.bgBat#{$i} {
+				$bgBatSize: calc(3 + random(5))+vh;
+				$bgBatRotate: calc(-30 + random(60))+deg;
+				$bgBatTranslateX: (calc(100 + random(30))+px, calc(50 + random(50))+px);
+
+				background: url(/images/bat.svg) no-repeat center / cover;
+				display: inline-block;
+				width: $bgBatSize;
+				height: $bgBatSize;
+				transform: rotate($bgBatRotate) translate(-$bgBatTranslateX);
+			}
+		}
 	}
 }
