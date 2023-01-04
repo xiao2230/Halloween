@@ -64,7 +64,7 @@ body {
   transform: translateY(-50%);
 }
 .banner .house img {
-  width: 400px;
+  width: calc(10vw + 300px);
   max-width: 90vw;
   max-height: 80vh;
 }
@@ -74,65 +74,81 @@ body {
 }
 .banner .bats .bat1 {
   display: inline-block;
-  transform: translateY(0vh);
+  transform: translateY(14vh);
 }
 .banner .bats .bat1 img {
   width: 3vh;
-  transform: rotate(-30deg);
+  transform: rotate(-17deg);
 }
 .banner .bats .bat2 {
   display: inline-block;
-  transform: translateY(12vh);
+  transform: translateY(1vh);
 }
 .banner .bats .bat2 img {
-  width: 4vh;
-  transform: rotate(9deg);
-}
-.banner .bats .bat3 {
-  display: inline-block;
-  transform: translateY(17vh);
-}
-.banner .bats .bat3 img {
-  width: 5vh;
-  transform: rotate(-34deg);
-}
-.banner .bats .bat4 {
-  display: inline-block;
-  transform: translateY(3vh);
-}
-.banner .bats .bat4 img {
   width: 6vh;
   transform: rotate(-15deg);
 }
+.banner .bats .bat3 {
+  display: inline-block;
+  transform: translateY(30vh);
+}
+.banner .bats .bat3 img {
+  width: 6vh;
+  transform: rotate(-18deg);
+}
+.banner .bats .bat4 {
+  display: inline-block;
+  transform: translateY(25vh);
+}
+.banner .bats .bat4 img {
+  width: 4vh;
+  transform: rotate(15deg);
+}
 .banner .bats .bat5 {
   display: inline-block;
-  transform: translateY(9vh);
+  transform: translateY(6vh);
 }
 .banner .bats .bat5 img {
-  width: 3vh;
-  transform: rotate(30deg);
+  width: 4vh;
+  transform: rotate(-23deg);
 }
 .banner .bats .bat6 {
   display: inline-block;
-  transform: translateY(27vh);
+  transform: translateY(19vh);
 }
 .banner .bats .bat6 img {
-  width: 3vh;
-  transform: rotate(-30deg);
+  width: 5vh;
+  transform: rotate(7deg);
 }
 .banner .bats .bat7 {
   display: inline-block;
-  transform: translateY(7vh);
+  transform: translateY(30vh);
 }
 .banner .bats .bat7 img {
-  width: 5vh;
-  transform: rotate(-33deg);
+  width: 6vh;
+  transform: rotate(-35deg);
 }
 .banner .bats .bat8 {
   display: inline-block;
-  transform: translateY(21vh);
+  transform: translateY(15vh);
 }
 .banner .bats .bat8 img {
-  width: 6vh;
-  transform: rotate(-12deg);
+  width: 3vh;
+  transform: rotate(10deg);
+}
+.banner .cats {
+  position: absolute;
+  right: 15vw;
+  bottom: 20vh;
+}
+.banner .cats .cat,
+.banner .cats .catTail,
+.banner .cats .catEyes {
+  position: absolute;
+}
+.banner .cats .cat img,
+.banner .cats .catTail img,
+.banner .cats .catEyes img {
+  width: 10vw;
+  max-width: 110px;
 }/*# sourceMappingURL=base.css.map */

@@ -58,7 +58,7 @@ body {
 		transform: translateY(-50%);
 
 		img {
-			width: 400px;
+			width: calc(10vw + 300px);
 			max-width: 90vw;
 			max-height: 80vh;
 		}
@@ -78,6 +78,23 @@ body {
 					width: randomNum(3, 6)+vh;
 					transform: rotate(randomNum(-35, 35)+deg);
 				}
+			}
+		}
+	}
+
+	.cats {
+		position: absolute;
+		right: 15vw;
+		bottom: 20vh;
+
+		.cat,
+		.catTail,
+		.catEyes {
+			position: absolute;
+
+			img {
+				width: 10vw;
+				max-width: 110px;
 			}
 		}
 	}
