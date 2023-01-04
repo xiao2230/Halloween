@@ -84,8 +84,8 @@ body {
 
 	.cats {
 		position: absolute;
-		right: 15vw;
-		bottom: 20vh;
+		right: 20vw;
+		bottom: 25vh;
 
 		.cat,
 		.catTail,
@@ -93,7 +93,7 @@ body {
 			position: absolute;
 
 			img {
-				width: 10vw;
+				width: 20vw;
 				max-width: 110px;
 			}
 		}
