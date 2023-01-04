@@ -10,26 +10,55 @@
 </head>
 
 <body>
-    <header>
-        <div class="bgSmoke"></div>
+    <header></header>
+    <div class="banner">
+        <!-- 背景-煙幕 -->
+        <div class="bgSmokes">
+            <div class="bgSmoke1"></div>
+            <div class="bgSmoke2"></div>
+            <div class="bgSmoke3"></div>
+        </div>
+        <!-- 背景-地平面 -->
         <div class="bgLand"></div>
-        <div class="bgMoons">
-            <div class="bgMoon"></div>
-            <div class="bgMoonHalo1"></div>
-            <div class="bgMoonHalo2"></div>
+        <!-- 月亮(含本體 + 光暈) -->
+        <div class="moons">
+            <div class="moonHalo2"><img src="/images/banner_moonHalo2.svg" alt="moonHalo2" title="moonHalo2"></div>
+            <div class="moonHalo1"><img src="/images/banner_moonHalo1.svg" alt="moonHalo1" title="moonHalo1"></div>
+            <div class="moon"><img src="/images/banner_moon.svg" alt="moon" title="moon"></div>
         </div>
-        <div class="bgHouse"></div>
-        <div class="bgBats">
-            <div class="bgBat1"></div>
-            <div class="bgBat2"></div>
-            <div class="bgBat3"></div>
-            <div class="bgBat4"></div>
-            <div class="bgBat5"></div>
-            <div class="bgBat6"></div>
-            <div class="bgBat7"></div>
-            <div class="bgBat8"></div>
+        <!-- 房子 -->
+        <div class="house"><img src="/images/banner_house.svg" alt="house" title="house"></div>
+        <!-- 蝙蝠群 -->
+        <div class="bats">
+            <div class="bat1"><img src="/images/bat.svg" alt="bat1" title="bat1"></div>
+            <div class="bat2"><img src="/images/bat.svg" alt="bat2" title="bat2"></div>
+            <div class="bat3"><img src="/images/bat.svg" alt="bat3" title="bat3"></div>
+            <div class="bat4"><img src="/images/bat.svg" alt="bat4" title="bat4"></div>
+            <div class="bat5"><img src="/images/bat.svg" alt="bat5" title="bat5"></div>
+            <div class="bat6"><img src="/images/bat.svg" alt="bat6" title="bat6"></div>
+            <div class="bat7"><img src="/images/bat.svg" alt="bat7" title="bat7"></div>
+            <div class="bat8"><img src="/images/bat.svg" alt="bat8" title="bat8"></div>
         </div>
-    </header>
+    </div>
+
+    <script src="/node_modules/gsap/dist/gsap.min.js"></script>
+    <script>
+        // 動畫：煙幕
+        gsap.timeline()
+            .to(".bgSmoke1", { opacity: 1, y: -50, duration: 1, ease: "none", repeat: -1, yoyo: true })
+            .to(".bgSmoke2", { opacity: 1, y: -50, duration: 1.5, ease: "none", repeat: -1, yoyo: true })
+            .to(".bgSmoke3", { opacity: 1, y: -50, duration: 2, ease: "none", repeat: -1, yoyo: true });
+
+        // 動畫：光暈(月亮)
+        gsap.timeline()
+            .to(".moonHalo1", { opacity: 1, duration: 1, ease: "back", repeat: -1, yoyo: true })
+            .to(".moonHalo2", { opacity: 1, duration: 1, ease: "back", repeat: -1, yoyo: true });
+
+        // 動畫：蝙蝠群
+        gsap.utils.toArray(".bats div").forEach(e => {
+            gsap.to(e, { rotate: gsap.utils.random(-5, 5) + "deg", scale: 0.7, duration: gsap.utils.random(0.4, 0.8), repeat: -1, yoyo: true })
+        });
+    </script>
 </body>
 
 </html>

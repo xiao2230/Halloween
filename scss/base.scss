@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixin";
+@import "extend";
 @import "func";
 
 body {
@@ -7,74 +8,77 @@ body {
 	box-sizing: border-box;
 }
 
-header {
+.banner {
 	height: 100vh;
 	background-color: $primary;
+	position: relative;
 
-	.bgSmoke {
-		@include bg_display;
-		background: url(/images/banner_bg_smoke.svg) no-repeat right bottom / cover;
-	}
-
-	.bgLand {
-		@include bg_display;
-		background: url(/images/banner_bg_land.svg) no-repeat right center / cover;
-	}
-
-	.bgHouse {
-		position: absolute;
-		top: 50%;
-		right: 5vw;
-		transform: translateY(-50%);
-		max-width: 90vw;
-		width: 400px;
-		height: 100vh;
-		background: url(/images/banner_bg_house.svg) no-repeat center / contain;
-	}
-
-	.bgBats {
-		position: absolute;
-		right: 15vw;
-
-		$bgBatNum: 8;
-		@for $i from 1 through $bgBatNum {
-			.bgBat#{$i} {
-				$bgBatSize: randomNum(3, 6)+vh;
-
-				background: url(/images/bat.svg) no-repeat center / cover;
-				display: inline-block;
-				width: $bgBatSize;
-				height: $bgBatSize;
-				transform: rotate(randomNum(-30, 30)+deg) translateY(randomNum(0, 25)+vh);
+	.bgSmokes {
+		$bgSmokeNum: 3;
+		@for $i from 1 through $bgSmokeNum {
+			.bgSmoke#{$i} {
+				@extend %bg_display;
+				background: url(/images/banner_bg_smoke#{$i}.svg) no-repeat right bottom / cover;
+				opacity: 0;
 			}
 		}
 	}
 
-	.bgMoons {
+	.bgLand {
+		@extend %bg_display;
+		background: url(/images/banner_bg_land.svg) no-repeat right bottom / cover;
+	}
+
+	.moons {
 		position: absolute;
 		top: 5vh;
 		left: 50%;
-		transform: translateX(-50%);
 
-		.bgMoon,
-		.bgMoonHalo1,
-		.bgMoonHalo2 {
+		.moon,
+		.moonHalo1,
+		.moonHalo2 {
 			position: absolute;
-			display: inline-block;
-			width: 20vh;
-			height: 20vh;
+
+			img {
+				width: 20vw;
+				max-width: 160px;
+			}
 		}
 
-		.bgMoon {
-			background: url(/images/banner_bg_moon.svg) no-repeat center / contain;
+		.moonHalo1,
+		.moonHalo2 {
+			opacity: 0;
 		}
+	}
 
-		.bgMoonHalo1 {
-			background: url(/images/banner_bg_moonHalo1.svg) no-repeat center / contain;
+	.house {
+		position: absolute;
+		top: 50%;
+		right: 5vw;
+		transform: translateY(-50%);
+
+		img {
+			width: 400px;
+			max-width: 90vw;
+			max-height: 80vh;
 		}
+	}
 
-		.bgMoonHalo2 {
-			background: url(/images/banner_bg_moonHalo2.svg) no-repeat center / contain;
+	.bats {
+		position: absolute;
+		right: 10vw;
+
+		$batNum: 8;
+		@for $i from 1 through $batNum {
+			.bat#{$i} {
+				display: inline-block;
+				transform: translateY(randomNum(0, 30)+vh);
+
+				img {
+					width: randomNum(3, 6)+vh;
+					transform: rotate(randomNum(-35, 35)+deg);
+				}
+			}
 		}
 	}
 }

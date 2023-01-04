@@ -6,117 +6,133 @@
   --primary: #fff;
 }
 
+.banner .bgLand, .banner .bgSmokes .bgSmoke3, .banner .bgSmokes .bgSmoke2, .banner .bgSmokes .bgSmoke1 {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
 body {
   margin: 0;
   box-sizing: border-box;
 }
 
-header {
+.banner {
   height: 100vh;
   background-color: var(--primary);
+  position: relative;
 }
-header .bgSmoke {
-  width: 100vw;
-  height: 100vh;
+.banner .bgSmokes .bgSmoke1 {
+  background: url(/images/banner_bg_smoke1.svg) no-repeat right bottom/cover;
+  opacity: 0;
+}
+.banner .bgSmokes .bgSmoke2 {
+  background: url(/images/banner_bg_smoke2.svg) no-repeat right bottom/cover;
+  opacity: 0;
+}
+.banner .bgSmokes .bgSmoke3 {
+  background: url(/images/banner_bg_smoke3.svg) no-repeat right bottom/cover;
+  opacity: 0;
+}
+.banner .bgLand {
+  background: url(/images/banner_bg_land.svg) no-repeat right bottom/cover;
+}
+.banner .moons {
   position: absolute;
-  background: url(/images/banner_bg_smoke.svg) no-repeat right bottom/cover;
+  top: 5vh;
+  left: 50%;
 }
-header .bgLand {
-  width: 100vw;
-  height: 100vh;
+.banner .moons .moon,
+.banner .moons .moonHalo1,
+.banner .moons .moonHalo2 {
   position: absolute;
-  background: url(/images/banner_bg_land.svg) no-repeat right center/cover;
 }
-header .bgHouse {
+.banner .moons .moon img,
+.banner .moons .moonHalo1 img,
+.banner .moons .moonHalo2 img {
+  width: 20vw;
+  max-width: 160px;
+}
+.banner .moons .moonHalo1,
+.banner .moons .moonHalo2 {
+  opacity: 0;
+}
+.banner .house {
   position: absolute;
   top: 50%;
   right: 5vw;
   transform: translateY(-50%);
-  max-width: 90vw;
+}
+.banner .house img {
   width: 400px;
-  height: 100vh;
-  background: url(/images/banner_bg_house.svg) no-repeat center/contain;
+  max-width: 90vw;
+  max-height: 80vh;
 }
-header .bgBats {
+.banner .bats {
   position: absolute;
-  right: 15vw;
+  right: 10vw;
 }
-header .bgBats .bgBat1 {
-  background: url(/images/bat.svg) no-repeat center/cover;
+.banner .bats .bat1 {
   display: inline-block;
-  width: 5vh;
-  height: 5vh;
-  transform: rotate(-26deg) translateY(15vh);
+  transform: translateY(0vh);
 }
-header .bgBats .bgBat2 {
-  background: url(/images/bat.svg) no-repeat center/cover;
-  display: inline-block;
-  width: 5vh;
-  height: 5vh;
-  transform: rotate(-11deg) translateY(3vh);
-}
-header .bgBats .bgBat3 {
-  background: url(/images/bat.svg) no-repeat center/cover;
-  display: inline-block;
+.banner .bats .bat1 img {
   width: 3vh;
-  height: 3vh;
-  transform: rotate(3deg) translateY(22vh);
+  transform: rotate(-30deg);
 }
-header .bgBats .bgBat4 {
-  background: url(/images/bat.svg) no-repeat center/cover;
+.banner .bats .bat2 {
   display: inline-block;
-  width: 5vh;
-  height: 5vh;
-  transform: rotate(-5deg) translateY(25vh);
+  transform: translateY(12vh);
 }
-header .bgBats .bgBat5 {
-  background: url(/images/bat.svg) no-repeat center/cover;
-  display: inline-block;
-  width: 3vh;
-  height: 3vh;
-  transform: rotate(17deg) translateY(19vh);
-}
-header .bgBats .bgBat6 {
-  background: url(/images/bat.svg) no-repeat center/cover;
-  display: inline-block;
+.banner .bats .bat2 img {
   width: 4vh;
-  height: 4vh;
-  transform: rotate(-7deg) translateY(9vh);
+  transform: rotate(9deg);
 }
-header .bgBats .bgBat7 {
-  background: url(/images/bat.svg) no-repeat center/cover;
+.banner .bats .bat3 {
   display: inline-block;
+  transform: translateY(17vh);
+}
+.banner .bats .bat3 img {
   width: 5vh;
-  height: 5vh;
-  transform: rotate(-10deg) translateY(10vh);
+  transform: rotate(-34deg);
 }
-header .bgBats .bgBat8 {
-  background: url(/images/bat.svg) no-repeat center/cover;
+.banner .bats .bat4 {
   display: inline-block;
+  transform: translateY(3vh);
+}
+.banner .bats .bat4 img {
+  width: 6vh;
+  transform: rotate(-15deg);
+}
+.banner .bats .bat5 {
+  display: inline-block;
+  transform: translateY(9vh);
+}
+.banner .bats .bat5 img {
+  width: 3vh;
+  transform: rotate(30deg);
+}
+.banner .bats .bat6 {
+  display: inline-block;
+  transform: translateY(27vh);
+}
+.banner .bats .bat6 img {
+  width: 3vh;
+  transform: rotate(-30deg);
+}
+.banner .bats .bat7 {
+  display: inline-block;
+  transform: translateY(7vh);
+}
+.banner .bats .bat7 img {
   width: 5vh;
-  height: 5vh;
-  transform: rotate(-12deg) translateY(23vh);
+  transform: rotate(-33deg);
 }
-header .bgMoons {
-  position: absolute;
-  top: 5vh;
-  left: 50%;
-  transform: translateX(-50%);
-}
-header .bgMoons .bgMoon,
-header .bgMoons .bgMoonHalo1,
-header .bgMoons .bgMoonHalo2 {
-  position: absolute;
+.banner .bats .bat8 {
   display: inline-block;
-  width: 20vh;
-  height: 20vh;
+  transform: translateY(21vh);
 }
-header .bgMoons .bgMoon {
-  background: url(/images/banner_bg_moon.svg) no-repeat center/contain;
-}
-header .bgMoons .bgMoonHalo1 {
-  background: url(/images/banner_bg_moonHalo1.svg) no-repeat center/contain;
-}
-header .bgMoons .bgMoonHalo2 {
-  background: url(/images/banner_bg_moonHalo2.svg) no-repeat center/contain;
+.banner .bats .bat8 img {
+  width: 6vh;
+  transform: rotate(-12deg);
 }/*# sourceMappingURL=base.css.map */
