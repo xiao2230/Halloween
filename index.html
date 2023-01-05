@@ -65,6 +65,11 @@
         gsap.utils.toArray(".bats div").forEach(e => {
             gsap.to(e, { rotate: gsap.utils.random(-5, 5) + "deg", scale: 0.7, duration: gsap.utils.random(0.4, 0.8), repeat: -1, yoyo: true })
         });
+
+        // 動畫：黑貓
+        gsap.timeline()
+            .to(".catTail", { rotation: -10, transformOrigin: "left", duration: 1, ease: "back", repeat: -1, yoyo: true })
+            .to(".catEyes", { x: -5, y: -3, duration: 1, ease: "back", repeat: -1, yoyo: true });
     </script>
 </body>
 
