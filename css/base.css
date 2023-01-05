@@ -34,9 +34,6 @@ body {
   background: url(/images/banner_bg_smoke3.svg) no-repeat right bottom/cover;
   opacity: 0;
 }
-.banner .bgLand {
-  background: url(/images/banner_bg_land.svg) no-repeat right bottom/cover;
-}
 .banner .moons {
   position: absolute;
   top: 5vh;
@@ -57,6 +54,9 @@ body {
 .banner .moons .moonHalo2 {
   opacity: 0;
 }
+.banner .bgLand {
+  background: url(/images/banner_bg_land.svg) no-repeat right bottom/cover;
+}
 .banner .house {
   position: absolute;
   top: 50%;
@@ -74,23 +74,23 @@ body {
 }
 .banner .bats .bat1 {
   display: inline-block;
-  transform: translateY(22vh);
+  transform: translateY(18vh);
 }
 .banner .bats .bat1 img {
   width: 6vh;
-  transform: rotate(7deg);
+  transform: rotate(30deg);
 }
 .banner .bats .bat2 {
   display: inline-block;
-  transform: translateY(5vh);
+  transform: translateY(14vh);
 }
 .banner .bats .bat2 img {
   width: 5vh;
-  transform: rotate(7deg);
+  transform: rotate(-1deg);
 }
 .banner .bats .bat3 {
   display: inline-block;
-  transform: translateY(28vh);
+  transform: translateY(24vh);
 }
 .banner .bats .bat3 img {
   width: 5vh;
@@ -98,43 +98,43 @@ body {
 }
 .banner .bats .bat4 {
   display: inline-block;
-  transform: translateY(1vh);
+  transform: translateY(0vh);
 }
 .banner .bats .bat4 img {
-  width: 3vh;
-  transform: rotate(-14deg);
+  width: 6vh;
+  transform: rotate(24deg);
 }
 .banner .bats .bat5 {
   display: inline-block;
-  transform: translateY(30vh);
+  transform: translateY(12vh);
 }
 .banner .bats .bat5 img {
   width: 5vh;
-  transform: rotate(17deg);
+  transform: rotate(-14deg);
 }
 .banner .bats .bat6 {
   display: inline-block;
-  transform: translateY(23vh);
+  transform: translateY(26vh);
 }
 .banner .bats .bat6 img {
   width: 3vh;
-  transform: rotate(-20deg);
+  transform: rotate(12deg);
 }
 .banner .bats .bat7 {
   display: inline-block;
-  transform: translateY(28vh);
+  transform: translateY(11vh);
 }
 .banner .bats .bat7 img {
-  width: 6vh;
-  transform: rotate(17deg);
+  width: 5vh;
+  transform: rotate(11deg);
 }
 .banner .bats .bat8 {
   display: inline-block;
-  transform: translateY(20vh);
+  transform: translateY(21vh);
 }
 .banner .bats .bat8 img {
-  width: 5vh;
-  transform: rotate(3deg);
+  width: 6vh;
+  transform: rotate(27deg);
 }
 .banner .cats {
   position: absolute;

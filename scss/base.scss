@@ -24,11 +24,6 @@ body {
 		}
 	}
 
-	.bgLand {
-		@extend %bg_display;
-		background: url(/images/banner_bg_land.svg) no-repeat right bottom / cover;
-	}
-
 	.moons {
 		position: absolute;
 		top: 5vh;
@@ -49,6 +44,11 @@ body {
 		.moonHalo2 {
 			opacity: 0;
 		}
+	}
+
+	.bgLand {
+		@extend %bg_display;
+		background: url(/images/banner_bg_land.svg) no-repeat right bottom / cover;
 	}
 
 	.house {
