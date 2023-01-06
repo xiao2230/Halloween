@@ -63,43 +63,37 @@
     <script src="/js/gsap.min.js"></script>
     <script src="/js/customAnimate.js"></script>
     <script>
-        // 動畫：[Banner]光暈(月亮)
-        gsap.timeline()
-            .to(".moonHalo1", { opacity: 1, duration: 1, ease: "back", repeat: -1, yoyo: true })
-            .to(".moonHalo2", { opacity: 1, duration: 1, ease: "back", repeat: -1, yoyo: true });
+        const tl = gsap.timeline({ defaults: { duration: 1, ease: "none", repeat: -1, yoyo: true } });
 
-        // 動畫：[Banner]背景-墓碑旁的手
-        gsap.timeline()
-            .to(".bgHand1", { opacity: 1, x: 5, y: -3, duration: 1, ease: "none", repeat: -1, yoyo: true })
-            .to(".bgHand2", { opacity: 1, x: 5, y: -3, duration: 0.7, ease: "none", repeat: -1, yoyo: true });
-
-        // 動畫：[Banner]背景-鬼魂
-        gsap.to(".bgGhost", { opacity: 0.8, y: 5, duration: 2, ease: "none", repeat: -1, yoyo: true })
-
-        // 動畫：[Banner]背景-巫婆
-        gsap.to(".bgWitch", { opacity: 0.8, x: 3, y: -10, duration: 1, ease: "none", repeat: -1, yoyo: true })
-
-        // 動畫：[Banner]背景-惡魔
-        gsap.to(".bgDemon", { opacity: 0.8, y: 5, duration: 1, ease: "power3.inOut", repeat: -1, yoyo: true })
-
-        // 動畫：[Banner]背景-煙幕
-        gsap.timeline()
-            .to(".bgSmoke1", { opacity: 1, y: -50, duration: 1, ease: "none", repeat: -1, yoyo: true })
-            .to(".bgSmoke2", { opacity: 1, y: -50, duration: 1.5, ease: "none", repeat: -1, yoyo: true })
-            .to(".bgSmoke3", { opacity: 1, y: -50, duration: 2, ease: "none", repeat: -1, yoyo: true });
-
-        // 動畫：[Banner]背景-樹
-        gsap.to(".bgTree", { x: 1, y: -1, duration: 0.3, ease: "none", repeat: -1, yoyo: true });
+        tl
+            // 動畫：[Banner]光暈(月亮)
+            .to(".moonHalo1", { opacity: 1 }, "0sec")
+            .to(".moonHalo2", { opacity: 1 })
+            // 動畫：[Banner]背景-墓碑旁的手
+            .to(".bgHand1", { opacity: 1, x: 5, y: -3 }, "0sec")
+            .to(".bgHand2", { opacity: 1, x: 5, y: -3 },)
+            // 動畫：[Banner]背景-鬼魂
+            .to(".bgGhost", { opacity: 0.8, y: 5, duration: 2 }, "0sec")
+            // 動畫：[Banner]背景-巫婆
+            .to(".bgWitch", { opacity: 0.8, x: 3, y: -10 }, "0sec")
+            // 動畫：[Banner]背景-惡魔
+            .to(".bgDemon", { opacity: 0.8, y: 5 }, "0sec")
+            // 動畫：[Banner]背景-煙幕
+            .to(".bgSmoke1", { opacity: 1, y: -50 }, "0sec")
+            .to(".bgSmoke2", { opacity: 1, y: -50, duration: 1.5 })
+            .to(".bgSmoke3", { opacity: 1, y: -50, duration: 2 })
+            // 動畫：[Banner]背景-樹
+            .to(".bgTree", { x: 1, y: -1, duration: 0.3 }, "0sec")
+            // 動畫：[Banner]黑貓
+            .to(".catTail", { rotation: -10 }, "0sec")
+            .to(".catEyes", { x: -5, y: -3 });
 
         // 動畫：[Banner]蝙蝠群
         gsap.utils.toArray(".bats div").forEach(e => {
             gsap.to(e, { rotate: gsap.utils.random(-5, 5) + "deg", scale: 0.7, duration: gsap.utils.random(0.4, 0.8), ease: "none", repeat: -1, yoyo: true })
         });
 
-        // 動畫：[Banner]黑貓
-        gsap.timeline()
-            .to(".catTail", { rotation: -10, transformOrigin: "left", duration: 1, ease: "back", repeat: -1, yoyo: true })
-            .to(".catEyes", { x: -5, y: -3, duration: 1, ease: "back", repeat: -1, yoyo: true });
+
     </script>
 </body>
 
