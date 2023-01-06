@@ -12,17 +12,7 @@ body {
 	height: 100vh;
 	background-color: $primary;
 	position: relative;
-
-	.bgSmokes {
-		$bgSmokeNum: 3;
-		@for $i from 1 through $bgSmokeNum {
-			.bgSmoke#{$i} {
-				@extend %bg_display;
-				background: url(/images/banner_bg_smoke#{$i}.svg) no-repeat right bottom / cover;
-				opacity: 0;
-			}
-		}
-	}
+	overflow: hidden;
 
 	.moons {
 		position: absolute;
@@ -44,6 +34,33 @@ body {
 		.moonHalo2 {
 			opacity: 0;
 		}
+	}
+
+	.bgHands {
+		$bgHandNum: 2;
+		@for $i from 1 through $bgHandNum {
+			.bgHand#{$i} {
+				@extend %bg_display;
+				background: url(/images/banner_bg_hand#{$i}.svg) no-repeat right bottom / cover;
+				opacity: 0;
+			}
+		}
+	}
+
+	.bgSmokes {
+		$bgSmokeNum: 3;
+		@for $i from 1 through $bgSmokeNum {
+			.bgSmoke#{$i} {
+				@extend %bg_display;
+				background: url(/images/banner_bg_smoke#{$i}.svg) no-repeat right bottom / cover;
+				opacity: 0;
+			}
+		}
+	}
+
+	.bgTree {
+		@extend %bg_display;
+		background: url(/images/banner_bg_tree.svg) no-repeat right bottom / cover;
 	}
 
 	.bgLand {

@@ -12,23 +12,30 @@
 <body>
     <header></header>
     <div class="banner">
-        <!-- 背景-煙幕 -->
-        <div class="bgSmokes">
-            <div class="bgSmoke1"></div>
-            <div class="bgSmoke2"></div>
-            <div class="bgSmoke3"></div>
-        </div>
-        <!-- 月亮(含本體 + 光暈) -->
+        <!-- [Banner]月亮(含本體 + 光暈) -->
         <div class="moons">
             <div class="moonHalo2"><img src="/images/banner_moonHalo2.svg" alt="moonHalo2" title="moonHalo2"></div>
             <div class="moonHalo1"><img src="/images/banner_moonHalo1.svg" alt="moonHalo1" title="moonHalo1"></div>
             <div class="moon"><img src="/images/banner_moon.svg" alt="moon" title="moon"></div>
         </div>
-        <!-- 背景-地平面 -->
+        <!-- [Banner]背景-墓碑旁的手 -->
+        <div class="bgHands">
+            <div class="bgHand1"></div>
+            <div class="bgHand2"></div>
+        </div>
+        <!-- [Banner]背景-煙幕 -->
+        <div class="bgSmokes">
+            <div class="bgSmoke1"></div>
+            <div class="bgSmoke2"></div>
+            <div class="bgSmoke3"></div>
+        </div>
+        <!-- [Banner]背景-樹 -->
+        <div class="bgTree"></div>
+        <!-- [Banner]背景-地平面 -->
         <div class="bgLand"></div>
-        <!-- 房子 -->
+        <!-- [Banner]房子 -->
         <div class="house"><img src="/images/banner_house.svg" alt="house" title="house"></div>
-        <!-- 蝙蝠群 -->
+        <!-- [Banner]蝙蝠群 -->
         <div class="bats">
             <div class="bat1"><img src="/images/bat.svg" alt="bat1" title="bat1"></div>
             <div class="bat2"><img src="/images/bat.svg" alt="bat2" title="bat2"></div>
@@ -39,7 +46,7 @@
             <div class="bat7"><img src="/images/bat.svg" alt="bat7" title="bat7"></div>
             <div class="bat8"><img src="/images/bat.svg" alt="bat8" title="bat8"></div>
         </div>
-        <!-- 黑貓 -->
+        <!-- [Banner]黑貓 -->
         <div class="cats">
             <div class="catTail"><img src="/images/banner_catTail.svg" alt="catTail" title="catTail"></div>
             <div class="cat"><img src="/images/banner_cat.svg" alt="cat" title="cat"></div>
@@ -50,23 +57,31 @@
     <script src="/js/gsap.min.js"></script>
     <script src="/js/customAnimate.js"></script>
     <script>
-        // 動畫：煙幕
+        // 動畫：[Banner]光暈(月亮)
+        gsap.timeline()
+            .to(".moonHalo1", { opacity: 1, duration: 1, ease: "back", repeat: -1, yoyo: true })
+            .to(".moonHalo2", { opacity: 1, duration: 1, ease: "back", repeat: -1, yoyo: true });
+
+        // 動畫：[Banner]背景-墓碑旁的手
+        gsap.timeline()
+            .to(".bgHand1", { opacity: 1, x: 5, y: -3, duration: 1, ease: "none", repeat: -1, yoyo: true })
+            .to(".bgHand2", { opacity: 1, x: 5, y: -3, duration: 0.7, ease: "none", repeat: -1, yoyo: true })
+
+        // 動畫：[Banner]背景-煙幕
         gsap.timeline()
             .to(".bgSmoke1", { opacity: 1, y: -50, duration: 1, ease: "none", repeat: -1, yoyo: true })
             .to(".bgSmoke2", { opacity: 1, y: -50, duration: 1.5, ease: "none", repeat: -1, yoyo: true })
             .to(".bgSmoke3", { opacity: 1, y: -50, duration: 2, ease: "none", repeat: -1, yoyo: true });
 
-        // 動畫：光暈(月亮)
-        gsap.timeline()
-            .to(".moonHalo1", { opacity: 1, duration: 1, ease: "back", repeat: -1, yoyo: true })
-            .to(".moonHalo2", { opacity: 1, duration: 1, ease: "back", repeat: -1, yoyo: true });
+        // 動畫：[Banner]背景-樹
+        gsap.to(".bgTree", { x: 1, y: -1, duration: 0.3, ease: "back", repeat: -1, yoyo: true });
 
-        // 動畫：蝙蝠群
+        // 動畫：[Banner]蝙蝠群
         gsap.utils.toArray(".bats div").forEach(e => {
-            gsap.to(e, { rotate: gsap.utils.random(-5, 5) + "deg", scale: 0.7, duration: gsap.utils.random(0.4, 0.8), repeat: -1, yoyo: true })
+            gsap.to(e, { rotate: gsap.utils.random(-5, 5) + "deg", scale: 0.7, duration: gsap.utils.random(0.4, 0.8), ease: "none", repeat: -1, yoyo: true })
         });
 
-        // 動畫：黑貓
+        // 動畫：[Banner]黑貓
         gsap.timeline()
             .to(".catTail", { rotation: -10, transformOrigin: "left", duration: 1, ease: "back", repeat: -1, yoyo: true })
             .to(".catEyes", { x: -5, y: -3, duration: 1, ease: "back", repeat: -1, yoyo: true });
