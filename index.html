@@ -23,6 +23,12 @@
             <div class="bgHand1"></div>
             <div class="bgHand2"></div>
         </div>
+        <!-- [Banner]背景-鬼魂 -->
+        <div class="bgGhost"></div>
+        <!-- [Banner]背景-巫婆 -->
+        <div class="bgWitch"></div>
+        <!-- [Banner]背景-惡魔 -->
+        <div class="bgDemon"></div>
         <!-- [Banner]背景-煙幕 -->
         <div class="bgSmokes">
             <div class="bgSmoke1"></div>
@@ -65,7 +71,16 @@
         // 動畫：[Banner]背景-墓碑旁的手
         gsap.timeline()
             .to(".bgHand1", { opacity: 1, x: 5, y: -3, duration: 1, ease: "none", repeat: -1, yoyo: true })
-            .to(".bgHand2", { opacity: 1, x: 5, y: -3, duration: 0.7, ease: "none", repeat: -1, yoyo: true })
+            .to(".bgHand2", { opacity: 1, x: 5, y: -3, duration: 0.7, ease: "none", repeat: -1, yoyo: true });
+
+        // 動畫：[Banner]背景-鬼魂
+        gsap.to(".bgGhost", { opacity: 0.8, y: 5, duration: 2, ease: "none", repeat: -1, yoyo: true })
+
+        // 動畫：[Banner]背景-巫婆
+        gsap.to(".bgWitch", { opacity: 0.8, x: 3, y: -10, duration: 1, ease: "none", repeat: -1, yoyo: true })
+
+        // 動畫：[Banner]背景-惡魔
+        gsap.to(".bgDemon", { opacity: 0.8, y: 5, duration: 1, ease: "power3.inOut", repeat: -1, yoyo: true })
 
         // 動畫：[Banner]背景-煙幕
         gsap.timeline()

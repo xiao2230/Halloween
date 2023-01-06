@@ -32,7 +32,7 @@ body {
 
 		.moonHalo1,
 		.moonHalo2 {
-			opacity: 0;
+			opacity: $opacityStart;
 		}
 	}
 
@@ -42,9 +42,27 @@ body {
 			.bgHand#{$i} {
 				@extend %bg_display;
 				background: url(/images/banner_bg_hand#{$i}.svg) no-repeat right bottom / cover;
-				opacity: 0;
+				opacity: $opacityStart;
 			}
 		}
+	}
+
+	.bgGhost {
+		@extend %bg_display;
+		background: url(/images/banner_bg_ghost.svg) no-repeat right bottom / cover;
+		opacity: $opacityStart;
+	}
+
+	.bgWitch {
+		@extend %bg_display;
+		background: url(/images/banner_bg_witch.svg) no-repeat right bottom / cover;
+		opacity: $opacityStart;
+	}
+
+	.bgDemon {
+		@extend %bg_display;
+		background: url(/images/banner_bg_demon.svg) no-repeat right bottom / cover;
+		opacity: $opacityStart;
 	}
 
 	.bgSmokes {
@@ -53,7 +71,7 @@ body {
 			.bgSmoke#{$i} {
 				@extend %bg_display;
 				background: url(/images/banner_bg_smoke#{$i}.svg) no-repeat right bottom / cover;
-				opacity: 0;
+				opacity: $opacityStart;
 			}
 		}
 	}

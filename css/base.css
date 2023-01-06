@@ -6,7 +6,7 @@
   --primary: #fff;
 }
 
-.banner .bgLand, .banner .bgTree, .banner .bgSmokes .bgSmoke3, .banner .bgSmokes .bgSmoke2, .banner .bgSmokes .bgSmoke1, .banner .bgHands .bgHand2, .banner .bgHands .bgHand1 {
+.banner .bgLand, .banner .bgTree, .banner .bgSmokes .bgSmoke3, .banner .bgSmokes .bgSmoke2, .banner .bgSmokes .bgSmoke1, .banner .bgDemon, .banner .bgWitch, .banner .bgGhost, .banner .bgHands .bgHand2, .banner .bgHands .bgHand1 {
   width: 100vw;
   height: 100vh;
   position: absolute;
@@ -41,27 +41,39 @@ body {
 }
 .banner .moons .moonHalo1,
 .banner .moons .moonHalo2 {
-  opacity: 0;
+  opacity: 0.2;
 }
 .banner .bgHands .bgHand1 {
   background: url(/images/banner_bg_hand1.svg) no-repeat right bottom/cover;
-  opacity: 0;
+  opacity: 0.2;
 }
 .banner .bgHands .bgHand2 {
   background: url(/images/banner_bg_hand2.svg) no-repeat right bottom/cover;
-  opacity: 0;
+  opacity: 0.2;
+}
+.banner .bgGhost {
+  background: url(/images/banner_bg_ghost.svg) no-repeat right bottom/cover;
+  opacity: 0.2;
+}
+.banner .bgWitch {
+  background: url(/images/banner_bg_witch.svg) no-repeat right bottom/cover;
+  opacity: 0.2;
+}
+.banner .bgDemon {
+  background: url(/images/banner_bg_demon.svg) no-repeat right bottom/cover;
+  opacity: 0.2;
 }
 .banner .bgSmokes .bgSmoke1 {
   background: url(/images/banner_bg_smoke1.svg) no-repeat right bottom/cover;
-  opacity: 0;
+  opacity: 0.2;
 }
 .banner .bgSmokes .bgSmoke2 {
   background: url(/images/banner_bg_smoke2.svg) no-repeat right bottom/cover;
-  opacity: 0;
+  opacity: 0.2;
 }
 .banner .bgSmokes .bgSmoke3 {
   background: url(/images/banner_bg_smoke3.svg) no-repeat right bottom/cover;
-  opacity: 0;
+  opacity: 0.2;
 }
 .banner .bgTree {
   background: url(/images/banner_bg_tree.svg) no-repeat right bottom/cover;
@@ -86,67 +98,67 @@ body {
 }
 .banner .bats .bat1 {
   display: inline-block;
-  transform: translateY(11vh);
+  transform: translateY(13vh);
 }
 .banner .bats .bat1 img {
-  width: 6vh;
-  transform: rotate(3deg);
+  width: 5vh;
+  transform: rotate(-24deg);
 }
 .banner .bats .bat2 {
   display: inline-block;
-  transform: translateY(11vh);
+  transform: translateY(13vh);
 }
 .banner .bats .bat2 img {
-  width: 4vh;
-  transform: rotate(-27deg);
+  width: 3vh;
+  transform: rotate(8deg);
 }
 .banner .bats .bat3 {
   display: inline-block;
-  transform: translateY(13vh);
+  transform: translateY(2vh);
 }
 .banner .bats .bat3 img {
-  width: 4vh;
-  transform: rotate(24deg);
+  width: 6vh;
+  transform: rotate(10deg);
 }
 .banner .bats .bat4 {
   display: inline-block;
-  transform: translateY(19vh);
+  transform: translateY(24vh);
 }
 .banner .bats .bat4 img {
-  width: 4vh;
-  transform: rotate(-13deg);
+  width: 3vh;
+  transform: rotate(30deg);
 }
 .banner .bats .bat5 {
   display: inline-block;
-  transform: translateY(18vh);
+  transform: translateY(23vh);
 }
 .banner .bats .bat5 img {
-  width: 4vh;
-  transform: rotate(18deg);
+  width: 6vh;
+  transform: rotate(7deg);
 }
 .banner .bats .bat6 {
   display: inline-block;
-  transform: translateY(28vh);
+  transform: translateY(0vh);
 }
 .banner .bats .bat6 img {
-  width: 5vh;
-  transform: rotate(5deg);
+  width: 4vh;
+  transform: rotate(-24deg);
 }
 .banner .bats .bat7 {
   display: inline-block;
-  transform: translateY(16vh);
+  transform: translateY(21vh);
 }
 .banner .bats .bat7 img {
-  width: 4vh;
-  transform: rotate(-27deg);
+  width: 3vh;
+  transform: rotate(7deg);
 }
 .banner .bats .bat8 {
   display: inline-block;
-  transform: translateY(7vh);
+  transform: translateY(9vh);
 }
 .banner .bats .bat8 img {
   width: 5vh;
-  transform: rotate(12deg);
+  transform: rotate(18deg);
 }
 .banner .cats {
   position: absolute;
