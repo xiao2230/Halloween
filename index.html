@@ -71,7 +71,7 @@
             .to(".moonHalo2", { opacity: 1 })
             // 動畫：[Banner]背景-墓碑旁的手
             .to(".bgHand1", { opacity: 1, x: 5, y: -3 }, "0sec")
-            .to(".bgHand2", { opacity: 1, x: 5, y: -3 },)
+            .to(".bgHand2", { opacity: 1, x: 5, y: 3, duration: 0.7 },)
             // 動畫：[Banner]背景-鬼魂
             .to(".bgGhost", { opacity: 0.8, y: 5, duration: 2 }, "0sec")
             // 動畫：[Banner]背景-巫婆
@@ -80,10 +80,10 @@
             .to(".bgDemon", { opacity: 0.8, y: 5 }, "0sec")
             // 動畫：[Banner]背景-煙幕
             .to(".bgSmoke1", { opacity: 1, y: -50 }, "0sec")
-            .to(".bgSmoke2", { opacity: 1, y: -50, duration: 1.5 })
-            .to(".bgSmoke3", { opacity: 1, y: -50, duration: 2 })
+            .to(".bgSmoke2", { opacity: 1, y: -50 })
+            .to(".bgSmoke3", { opacity: 1, y: -50, duration: 1.2 })
             // 動畫：[Banner]背景-樹
-            .to(".bgTree", { x: 1, y: -1, duration: 0.3 }, "0sec")
+            .to(".bgTree", { x: 1, duration: 0.3 }, "0sec")
             // 動畫：[Banner]黑貓
             .to(".catTail", { rotation: -10 }, "0sec")
             .to(".catEyes", { x: -5, y: -3 });
