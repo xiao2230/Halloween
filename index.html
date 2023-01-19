@@ -54,6 +54,7 @@
 
         //監聽歷史紀錄變化
         window.addEventListener("popstate", function (e) {
+            console.log(location);
             //使用location.pathname判斷頁面內容
             renderByUrl(location.pathname);
         });
