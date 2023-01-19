@@ -51,6 +51,12 @@
             //這時location.pathname為'/'
             renderByUrl(location.pathname);
         });
+
+        //監聽歷史紀錄變化
+        window.addEventListener("popstate", function (e) {
+            //使用location.pathname判斷頁面內容
+            renderByUrl(location.pathname);
+        });
     </script>
 </body>
 
