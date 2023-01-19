@@ -5,95 +5,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trick or treat</title>
-    <link rel="stylesheet" href="/css/base.css">
+    <title>Document</title>
 </head>
 
 <body>
-    <header></header>
-    <div class="banner">
-        <!-- [Banner]月亮(含本體 + 光暈) -->
-        <div class="moons">
-            <div class="moonHalo2"><img src="/images/banner_moonHalo2.svg" alt="moonHalo2" title="moonHalo2"></div>
-            <div class="moonHalo1"><img src="/images/banner_moonHalo1.svg" alt="moonHalo1" title="moonHalo1"></div>
-            <div class="moon"><img src="/images/banner_moon.svg" alt="moon" title="moon"></div>
-        </div>
-        <!-- [Banner]背景-墓碑旁的手 -->
-        <div class="bgHands">
-            <div class="bgHand1"></div>
-            <div class="bgHand2"></div>
-        </div>
-        <!-- [Banner]背景-鬼魂 -->
-        <div class="bgGhost"></div>
-        <!-- [Banner]背景-巫婆 -->
-        <div class="bgWitch"></div>
-        <!-- [Banner]背景-惡魔 -->
-        <div class="bgDemon"></div>
-        <!-- [Banner]背景-煙幕 -->
-        <div class="bgSmokes">
-            <div class="bgSmoke1"></div>
-            <div class="bgSmoke2"></div>
-            <div class="bgSmoke3"></div>
-        </div>
-        <!-- [Banner]背景-樹 -->
-        <div class="bgTree"></div>
-        <!-- [Banner]背景-地平面 -->
-        <div class="bgLand"></div>
-        <!-- [Banner]房子 -->
-        <div class="house"><img src="/images/banner_house.svg" alt="house" title="house"></div>
-        <!-- [Banner]蝙蝠群 -->
-        <div class="bats">
-            <div class="bat1"><img src="/images/bat.svg" alt="bat1" title="bat1"></div>
-            <div class="bat2"><img src="/images/bat.svg" alt="bat2" title="bat2"></div>
-            <div class="bat3"><img src="/images/bat.svg" alt="bat3" title="bat3"></div>
-            <div class="bat4"><img src="/images/bat.svg" alt="bat4" title="bat4"></div>
-            <div class="bat5"><img src="/images/bat.svg" alt="bat5" title="bat5"></div>
-            <div class="bat6"><img src="/images/bat.svg" alt="bat6" title="bat6"></div>
-            <div class="bat7"><img src="/images/bat.svg" alt="bat7" title="bat7"></div>
-            <div class="bat8"><img src="/images/bat.svg" alt="bat8" title="bat8"></div>
-        </div>
-        <!-- [Banner]黑貓 -->
-        <div class="cats">
-            <div class="catTail"><img src="/images/banner_catTail.svg" alt="catTail" title="catTail"></div>
-            <div class="cat"><img src="/images/banner_cat.svg" alt="cat" title="cat"></div>
-            <div class="catEyes"><img src="/images/banner_catEyes.svg" alt="catEyes" title="catEyes"></div>
-        </div>
-    </div>
+    <ul class="nav">
+        <li><a href="Home">主頁</a></li>
+        <li><a href="About">關於</a></li>
+        <li><a href="Contact">聯繫</a></li>
+    </ul>
+    <section id="wrapper"></section>
 
-    <script src="/js/gsap.min.js"></script>
-    <script src="/js/customAnimate.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js"
+        integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
     <script>
-        const tl = gsap.timeline({ defaults: { duration: 1, ease: "none", repeat: -1, yoyo: true } });
+        //綁定渲染元素
+        const wrapper = document.querySelector("#wrapper");
 
-        tl
-            // 動畫：[Banner]光暈(月亮)
-            .to(".moonHalo1", { opacity: 1 }, "0sec")
-            .to(".moonHalo2", { opacity: 1 })
-            // 動畫：[Banner]背景-墓碑旁的手
-            .to(".bgHand1", { opacity: 1, x: 5, y: -3 }, "0sec")
-            .to(".bgHand2", { opacity: 1, x: 5, y: 3, duration: 0.7 },)
-            // 動畫：[Banner]背景-鬼魂
-            .to(".bgGhost", { opacity: 0.8, y: 5, duration: 2 }, "0sec")
-            // 動畫：[Banner]背景-巫婆
-            .to(".bgWitch", { opacity: 0.8, x: 3, y: -10 }, "0sec")
-            // 動畫：[Banner]背景-惡魔
-            .to(".bgDemon", { opacity: 0.8, y: 5 }, "0sec")
-            // 動畫：[Banner]背景-煙幕
-            .to(".bgSmoke1", { opacity: 1, y: -50 }, "0sec")
-            .to(".bgSmoke2", { opacity: 1, y: -50 })
-            .to(".bgSmoke3", { opacity: 1, y: -50, duration: 1.2 })
-            // 動畫：[Banner]背景-樹
-            .to(".bgTree", { x: 1, duration: 0.3 }, "0sec")
-            // 動畫：[Banner]黑貓
-            .to(".catTail", { rotation: -10 }, "0sec")
-            .to(".catEyes", { x: -5, y: -3 });
+        //判斷目前頁面
+        function renderByUrl(url) {
+            console.log("目前路徑為:", url);
+            if (url === "/" || url === "/Home") {
+                wrapper.innerHTML = "這是主頁";
+            } else if (url === "/About") {
+                wrapper.innerHTML = "這是關於頁";
+            } else if (url === "/Contact") {
+                wrapper.innerHTML = "這是聯繫頁";
+            }
+        }
 
-        // 動畫：[Banner]蝙蝠群
-        gsap.utils.toArray(".bats div").forEach(e => {
-            gsap.to(e, { rotate: gsap.utils.random(-5, 5) + "deg", scale: 0.7, duration: gsap.utils.random(0.4, 0.8), ease: "none", repeat: -1, yoyo: true })
+        //監聽網址改變事件
+        $(".nav a").on("click", function (e) {
+            //取消超連結預設行為
+            e.preventDefault();
+            //改變網址
+            history.pushState(null, null, $(this).attr("href"));
+            console.log(location);
+            //使用location.pathname判斷頁面內容
+            renderByUrl(location.pathname);
         });
 
-
+        //監聽載入後的頁面
+        window.addEventListener("load", function () {
+            console.log(location);
+            //這時location.pathname為'/'
+            renderByUrl(location.pathname);
+        });
     </script>
 </body>
 
