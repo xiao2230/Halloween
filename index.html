@@ -22,6 +22,11 @@
     <script>
         function renderByUrl(url) {
             console.log("目前路徑為:", url);
+            //若沒有hash值預設導向至#/
+            if (location.hash === "") {
+                location.href = "#/";
+                return;
+            }
             //路徑對應頁面內容
             if (url === "#/" || url === "#/Home") {
                 wrapper.innerHTML = "這是主頁";
